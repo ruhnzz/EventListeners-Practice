@@ -13,6 +13,11 @@ after uploading a file
    
    <img width="753" height="844" alt="image" src="https://github.com/user-attachments/assets/5cb48b31-e650-4b34-9466-65adbd7209c3" />
 
+------------
+4. Form Data displayed in Table
+   ![Uploading image.png…]()
+
+
 
 
 
