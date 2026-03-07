@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        #main{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+        input{
+            display: none;
+        }
+        #btn{
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            border: 2px solid #9a9898;
+            border-radius: 5px;
+            font-size: 20px;
+        }
+        #btn:hover{
+            background-color: rgb(31, 31, 179);
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <input type="file">
+        <div id="btn">Upload File</div>
+    </div>
+
+    <script>
+        let btn = document.querySelector("#btn");
+        let inp = document.querySelector("input");
+
+        btn.addEventListener("click",()=>{
+            inp.click()
+        })
+        inp.addEventListener("change",(e)=>{
+            // console.log(e.target.files[0].name)
+            // btn.textContent=e.target.files[0].name if i click upload and cancel i am getting error
+            let file = e.target.files[0]
+            if(file){
+                btn.textContent=file.name
+            }
+        })
+    </script>
+    
+</body>
+</html>
