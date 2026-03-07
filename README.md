@@ -9,9 +9,10 @@ after uploading a file
 2. whenever we press any key it will shown on the screen
 
 ----
-
 3. Form Data displayed in card
+   
    <img width="753" height="844" alt="image" src="https://github.com/user-attachments/assets/5cb48b31-e650-4b34-9466-65adbd7209c3" />
+
 
 
 
