@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            display: block;
+            margin: 10px;
+            padding: 5px;
+        }
+        .btn{
+            background-color: blue;
+            color: white;
+            border: 2px solid rgb(215, 203, 203);
+            border-radius: 5px;
+            padding: 10px 50px;
+            margin-top: 20px;
+        }
+        .btn:hover{
+            background-color: rgb(32, 32, 213);
+        }
+
+        .tablestyle{
+            border: 2px solid black;
+            border-collapse: collapse;
+            
+        }
+        th{
+            background-color: rgb(242, 225, 98);
+        }
+        .tdata,th{
+            border: 2px solid black;
+            padding: 5px;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Form Data Into Table</h1>
+        <form>
+            <input type="text" placeholder="name">
+            <input type="text" placeholder="age">
+            <input type="text" placeholder="email">
+            <input type="text" placeholder="profession">
+            <input type="submit" class="btn">
+        </form>
+        <div>
+            <table class="tablestyle">
+               <tr> <th>Name</th>
+                <th>Age</th>
+                <th>Email</th>
+                <th>Profession</th>
+            </tr>
+
+               <!-- <tr>
+                <td>Alex</td>
+               <td>48</td>
+               <td>alex@gmail.com</td>
+               <td>Senior Software Engineer</td>
+            </tr>-->
+            </table>
+        </div>
+
+        <script>
+            let form = document.querySelector("form");
+            form.addEventListener("submit",(e)=>{
+                e.preventDefault();
+                let inputs = document.querySelectorAll("input");
+                console.log(inputs)
+
+                //call the present elements
+                let table = document.querySelector("table");
+
+                //create required elements
+                let row = document.createElement("tr");
+
+                let data1 = document.createElement("td");
+                data1.classList.add("tdata");
+                data1.textContent=inputs[0].value;
+
+                 let data2 = document.createElement("td");
+                data2.classList.add("tdata");
+                data2.textContent=inputs[1].value;
+
+                 let data3 = document.createElement("td");
+                data3.classList.add("tdata");
+                data3.textContent=inputs[2].value;
+
+                 let data4 = document.createElement("td");
+                data4.classList.add("tdata");
+                data4.textContent=inputs[3].value;
+
+                row.appendChild(data1);
+                row.appendChild(data2);
+                row.appendChild(data3);
+                row.appendChild(data4);
+                table.appendChild(row);
+
+                //form should be wmpty after displayed in table
+                inputs.forEach((input)=>{
+                    if(input.type!=="submit"){
+                        input.value="";
+                    }
+                })
+
+            
+
+
+            })
+        </script>
+</body>
+</html>
