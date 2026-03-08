@@ -72,6 +72,14 @@
                 let inputs = document.querySelectorAll("input");
                 console.log(inputs)
 
+            //don't use for each here it is not working not stoping the iteration
+        for(let input of inputs){
+            if(input.type!=="submit"&&input.value.trim()===""){
+                return;
+            }
+        }
+
+
                 //call the present elements
                 let table = document.querySelector("table");
 
@@ -113,4 +121,5 @@
             })
         </script>
 </body>
+
 </html>
