@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(237, 234, 234);
+        }
+        .card{
+            /* border: 2px solid black; */
+            width: 25%;
+            height: 25%;
+            border-radius: 10px;
+            text-align: center;
+            padding: 10px;
+            background-color: beige;
+        }
+        .bar{
+            border: 2px solid black;
+            width:70%;
+            height: 10%;
+            margin: auto;
+            border-radius: 15px;
+        }
+        .progress{
+            height: 100%;
+            width: 10%;
+            background-color: red;
+            
+        }
+        h2{
+            margin-bottom:30px ;
+        }
+        p{
+            margin: 30px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Download</h2>
+        <div class="bar">
+            <div class="progress"></div>
+        </div>
+        <p>0%</p>
+    </div>
+
+    <script>
+        const sec = 3;
+        let count = 0
+        let progress=document.querySelector(".progress");
+        setInterval(()=>{
+            if(count<=99){
+                count++;
+                progress.style.width=`${count}%`;
+                document.querySelector("p").textContent=`${count}%`        
+            }
+            else{
+                document.querySelector("h2").textContent="Downloaded"
+            }
+        }
+        ,sec*1000/100);
+    </script>
+</body>
+</html>
