@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter here">
+    <h1>Character count(only 20 characters): <span>0</span></h1>
+    <h2>Characters left: <span id="left">0</span></h2>
+
+    <script>
+         let input = document.querySelector("input");
+         let count = document.querySelector("span");
+         let left = document.querySelector("#left");
+        //  console.dir(count) we need to dynamic value in textContent
+         input.addEventListener("input",()=>{
+            // console.dir(input)  print element there we can see name enetred is in value of that object
+            // console.dir(input.value.length) this gives the length so we need to put this in span
+            count.textContent=input.value.length
+            let remaining = 20-input.value.length;
+            left.textContent=remaining;
+            if(remaining<0){
+                left.style.color="red";
+            }
+            else{
+                left.style.color="black"
+            }
+         })
+    </script>
+</body>
+</html>
