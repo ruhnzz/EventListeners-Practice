@@ -18,6 +18,13 @@ after uploading a file
    
    <img width="602" height="625" alt="image" src="https://github.com/user-attachments/assets/552dac30-d289-42a2-acc4-9334663dbc93" />
 
+-----------------------------
+5. live character count
+
+<img width="733" height="225" alt="image" src="https://github.com/user-attachments/assets/fee8c655-93ff-4a17-948e-ad69195bf7d7" />
+
+
+
 
 
 
