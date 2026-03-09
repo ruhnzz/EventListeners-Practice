@@ -23,6 +23,12 @@ after uploading a file
 
 <img width="733" height="225" alt="image" src="https://github.com/user-attachments/assets/fee8c655-93ff-4a17-948e-ad69195bf7d7" />
 
+---------------
+6. Downloading using setInterval
+<img width="595" height="448" alt="image" src="https://github.com/user-attachments/assets/99fad769-ca95-4cb6-9efd-ae04c976ff1d" />
+
+
+
 
 
 
